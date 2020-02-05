@@ -20,3 +20,19 @@
   (newline)
   (display (reverse-general '((a b c) (d e f)))) ;check
   (newline)
+  (display (reverse-general '((a (b c) ((d e) f) g)))) ;check
+  (newline)
+  (display (reverse-general '((1 (2 3) (4 (a (b (c d)))))))) ;check
+  
+  ;2. Write a function (sum-up-numbers-simple L). L is a list, which may contain as elements numbers and non-numbers. The result of the function is the sum of the numbers not in nested lists in L. If there are no such numbers, the result is zero
+   
+  (define (sum-up-numbers-simple L)
+    (cond
+     ((null? L) 0)
+     ((list? (car L)) (+ (sum-up-numbers-simple (cdr L))))
+     ((not(number? (car L))) (sum-up-numbers-simple (cdr L)))
+     (else (+ (car L) (sum-up-numbers-simple (cdr L))))
+  )
+)
+
+   
