@@ -75,4 +75,10 @@
   (display (sum-up-numbers-general '(100))) ;check
   (newline)
   (display (sum-up-numbers-general '(100 200))) ;check
+  (newline)
+( display (sum-up-numbers-general '(a))) ;check
+( newline)
+( display (sum-up-numbers-general '(a 100 b 200 c 300 d))) ;check
+( newline)
+( display (sum-up-numbers-general '(()))) ;check
    
