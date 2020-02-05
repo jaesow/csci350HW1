@@ -64,4 +64,8 @@
     ((null? L) 0)
     ((list? (car L)) (+ (sum-up-numbers-general (car L))
                         (sum-up-numbers-general (cdr L))))
+   ((not(number? (car L))) (sum-up-numbers-general (cdr L)))
+    (else (+ (car L) (sum-up-numbers-general (cdr L))))
+  )
+)
    
