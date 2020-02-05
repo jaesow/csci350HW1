@@ -1,2 +1,2 @@
 # csci350HW1
-Functional Programming Websites
+Functional Programming Excersises
