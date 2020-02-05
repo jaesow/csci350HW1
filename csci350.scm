@@ -68,4 +68,11 @@
     (else (+ (car L) (sum-up-numbers-general (cdr L))))
   )
 )
+  
+  ;Test cases
+  (display (sum-up-numbers-general '())) ;check
+  (newline)
+  (display (sum-up-numbers-general '(100))) ;check
+  (newline)
+  (display (sum-up-numbers-general '(100 200))) ;check
    
