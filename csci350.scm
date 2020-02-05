@@ -46,7 +46,22 @@
    (newline)
    (display (sum-up-numbers-simple '(a 100))) ;check
    (newline)
+   (display (sum-up-numbers-simple '(a b c))) ;
+   (newline)
+   (display (sum-up-numbers-simple '(100 a))) ;
+   (newline)
+   (display (sum-up-numbers-simple '(a 100))) ;check
+   (newline)
+   (display (sum-up-numbers-simple  '(100 (200)))) ;check
+   (newline)
+   (display (sum-up-numbers-simple '(a 100 b (200) c 300 d))) ;check
+  
   
   ;3. Write a function (sum-up-numbers-general L). L is a list, which may contain as elements numbers and non-numbers. The result of the function is the sum of all the numbers (including those in nested lists) in L. If there are no such numbers, the result is zero.
 
+  (define (sum-up-numbers-general L)
+  (cond
+    ((null? L) 0)
+    ((list? (car L)) (+ (sum-up-numbers-general (car L))
+                        (sum-up-numbers-general (cdr L))))
    
