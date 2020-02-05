@@ -4,3 +4,6 @@
             '()
             (if (list? (car L)) ;car = contents of address register holds the first value of the list
                 (append (reverse-general (cdr L)) ;cdr = contents of data register holds next cons cell which has its own car and cdr 
+           )
+        )
+)
