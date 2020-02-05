@@ -15,3 +15,8 @@
   (display (reverse-general '(a b c))) ;check
   (newline)
   (display (reverse-general '(a b ()))) ;check
+  (newline)
+  (display (reverse-general '((a b c)))) ;check
+  (newline)
+  (display (reverse-general '((a b c) (d e f)))) ;check
+  (newline)
